@@ -63,26 +63,27 @@ void PrintPoints (int getAPoint1, int getAPoint2)
 }
 
 
-void findAnElement (int [,] array, int getAPoint1, int getAPoint2)
-{
-    
-    for (int i = 0; i < array.GetLength (0); i++)
-    {
-        for (int j = 0; j < array.GetLength (0); j++)
-        {
-            int m = getAPoint1;
-            int n = getAPoint2;
-            if (m == i && n == j)
-            {
-                Console.WriteLine (array[i, j]);
-            } 
-            else if (m != i && n != j)
-            {
-                Console.WriteLine ("connot find an element in array");
-            }
-        }
-    }
-}
+// void findAnElement (int [,] array, int getAPoint1, int getAPoint2)
+// {
+//         int m = getAPoint1;
+//         int n = getAPoint2;
+//     for (int i = 0; i < array.GetLength (0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength (0); j++)
+//         {
+//             if (m == i && n == j)
+//             {
+//                 Console.WriteLine (array[i, j]);
+//             } 
+//             else
+//             {
+//                 Console.WriteLine ("connot find an element in array");
+//             }
+//         }
+//     }
+// }
+
+
 
 
 
@@ -91,5 +92,44 @@ PrindArray2d(array2d);
 int m = getAPoint1();
 int n = getAPoint2();
 PrintPoints(m, n);
-findAnElement (array2d, m, n);
+if (m >= array2d.GetLength(0) || n >= array2d.GetLength(1) || m < 0 || n < 0 )
+{
+    Console.WriteLine ("Cannot find this element");
+}
+else
+{
+    Console.WriteLine(array2d [m, n]);
+}
+
+
+
+            // if (m < 0 || n < 0 || m <= array2d.GetLength(0) || n <= array2d.GetLength(0))
+            // {
+            //     Console.WriteLine ("Cannot find this element");
+            // }
+            // else
+            // {
+            //     Console.WriteLine(array2d[m, n]);
+            // }
+
+// findAnElement (array2d, m, n);
+    // for (int i = 0; i < array2d.GetLength (0); i++)
+    // {
+    //     for (int j = 0; j < array2d.GetLength (0); j++)
+    //     {
+    //         int summ = 0;
+    //         if (m == i && n == j)
+    //         {
+    //         {
+    //             summ = array2d [i, j];
+    //             Console.WriteLine (summ);
+    //         } 
+    //         else 
+    //             Console.WriteLine("not found");
+            
+    //         }
+
+           
+    //     }
+    // }
 
